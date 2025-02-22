@@ -1,0 +1,115 @@
+/*
+   Functions to help to learn/verify square and cube roots a la Knott
+   with the abacus, soroban, suanpan.
+
+   See: https://jccabacus.blogspot.com/2021/06/roots-la-knott.html
+   as a reference.
+
+   Jesús Cabrera, June 2021
+   CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+
+   Use at your oun risk!
+*/
+
+define int(x) 
+{
+
+# Integer part of x
+
+    auto os,r
+    os=scale; scale=0
+    r=x/1
+    scale= os
+    return (r)
+}
+
+define cbrt(x)
+{
+
+# Cube root of x
+
+    return (e(l(x)/3))
+}
+
+define knott2(r0, y0, alpha)
+{
+
+/*
+    Square root following Cargill G. Knott steps
+
+    See example of use in file sr200703.bc
+        use: $ sr200703.bc |bc -l knott.bc
+*/
+    auto so, div
+    
+    so = scale; /* Store old scale value */
+    scale = 1
+
+    a = 10*y0
+    div = 100*r0 + alpha/2
+    print "New dividend: ",div/1,"\n"
+    b = int(div/(a))
+    tf = div -b*a -b^2/2
+    if (tf<0){
+        b=b-1;print "Revising down, b = ",b, "\n"
+        tf = div -b*a -b^2/2
+    }
+    print "New root: ", a+b,", New half-remainder: ", tf/1
+    print "\n==================\n\n"
+    scale = so; /* restore old scale value */
+
+    return
+}
+
+
+define knott3(r0, y0, alpha)
+{
+
+/*
+    Cube root following Cargill G. Knott steps
+
+    See example of use in file r488931400152.bc
+        use: $ cat r488931400152.bc |bc -l knott.bc
+
+*/
+    auto so, div, ta, tb, tc, td, te
+    
+    so = scale; /* Store old scale value */
+    scale = 0
+
+    a = 10*y0
+    div = 1000*r0 + alpha
+    print "New dividend: ",div,"\n\n"
+
+    ta = div/y0; rem1 = div % y0
+    print "a) /a:   ", ta, "   rem1: ", rem1, "\n"
+    tb = (10*ta)/3; rem2 = (10*ta) % 3
+    print "b) /3:   ", tb, "   rem2: ", rem2, "\n"
+    b = tb/(100*a)
+    print "     b = ",b,"\n"
+    tc = tb - b*(a+b)*100
+    print "d)   :   ",tc,"\n"
+    b = tb/(100*(a+b))
+    print "     b = ",b,"\n"
+    tc = tb - b*(a+b)*100
+    print "d)   :   ",tc,"\n"
+    if(b==10){ 
+    /* Trick to avoid some problems */
+        b = 9
+        print "b: ",b,"\n"
+        tc = tb - b*(a+b)*100
+        print "d) tc:   ",tc,"\n"
+    }
+    td = tc*3 +rem2
+    print "e) *3:   ",td,"\n"
+    te = (td/10)*y0 +rem1
+    print "f) *a:   ",te,"\n"
+    tf = te - b^3
+    print "g) -b^3: ",tf,"\n"
+    print "\nNew root: ",(a+b)," New remainder: ",tf,"\n\n"
+    print "==================\n\n"
+    scale = so; /* restore old scale value */
+
+    return
+}
+

@@ -1,0 +1,41 @@
+/*
+    Example: cube root of 488931400152
+    
+    Use:
+        $ cat cr488931400152.bc |bc -l knott.bc
+    or
+        $ bc -l knott.bc < cr488931400152.bc
+*/
+
+print "\nCube root of ", 488931400152, " = ", cbrt(488931400152), "\n\n"
+
+/*
+    Decompose in triplets (will be alpha): #   488, 931, 400, 152 
+
+    Initialize (first step)
+*/
+
+alpha = 488
+    b = int(cbrt(alpha))
+    r0 = alpha - b^3
+    a = 0
+    tf = r0
+    print "First root: ", b, ", First remainder: ", r0, "\n"
+    print "==================\n\n"
+
+/*
+    Main: 
+        Repeat for each triplet (alpha)...
+*/
+
+alpha = 931
+    mute = knott3(tf, a+b, alpha)
+alpha = 400
+    mute = knott3(tf, a+b, alpha)
+alpha = 152
+    mute = knott3(tf, a+b, alpha)
+
+/*
+    For additional digits continue with alpha = 000
+*/
+

@@ -1,0 +1,47 @@
+/* 
+    Example: square root of 200703 
+    
+        Use:
+        $ cat sr200703.bc |bc -l knott.bc
+    or
+        $ bc -l knott.bc < sr200703.bc
+*/
+
+print "\nSquare root of ", 200703, " = ", sqrt(200703), "\n\n"
+
+/* 
+    Decompose in pairs of digits (will be alpha): 20, 07, 03 
+
+
+    Initialize (first step)
+*/
+alpha = 20
+    b = int(sqrt(alpha))
+    r0 = alpha - b^2
+    a = 0
+    tf = r0/2
+    print "First root: ", b, ", First half-remainder: ", tf, "\n"
+    print "==================\n\n"
+
+/*  
+    Main:
+        Repeat for each pair of digits (alpha)...
+*/
+
+alpha =07
+    mute=knott2(tf, a+b, alpha)
+alpha =03
+    mute=knott2(tf, a+b, alpha)
+/*
+    For additional digits continue with alpha = 00
+*/
+alpha =00
+    mute=knott2(tf, a+b, alpha)
+alpha =00
+    mute=knott2(tf, a+b, alpha)
+alpha =00
+    mute=knott2(tf, a+b, alpha)
+alpha =00
+    mute=knott2(tf, a+b, alpha)
+
+

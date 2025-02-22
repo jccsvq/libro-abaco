@@ -1,0 +1,14 @@
+# Example: cube root of 659
+
+print "\nCube root of ", 659, " = ", cbrt(659), "\n\n"
+
+r0 = 659 - 8^3
+y0 = 8
+alpha = 000
+
+mute = knott3(r0, y0, alpha)
+mute = knott3(tf, a+b, 000)
+mute = knott3(tf, a+b, 000)
+mute = knott3(tf, a+b, 000)
+mute = knott3(tf, a+b, 000)
+
