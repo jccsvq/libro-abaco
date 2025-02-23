@@ -17,5 +17,5 @@ printf "<pre style=\"font-size: 21px;\">&nbsp;&nbsp;"
 for(i=1;i<=NF;i++){
     printf "%s ", $i;  
     };
-print "</pre>\s" ; 
+print "</pre>\n" ; 
 }
