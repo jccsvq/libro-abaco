@@ -1,6 +1,6 @@
 libro-abaco
 ---
-Este repositorio contiene la trascripción, en curso, del wikilibro [El Ábaco Oriental](https://es.wikibooks.org/wiki/%C3%81baco_Oriental) (y su [version PDF](https://upload.wikimedia.org/wikipedia/commons/6/69/%C3%81baco_Oriental-Wikilibro.pdf)) a [TiddlyWiki](https://tiddlywiki.com/).
+Este repositorio contiene la trascripción y revisión del wikilibro [El Ábaco Oriental](https://es.wikibooks.org/wiki/%C3%81baco_Oriental) (y su [version PDF](https://upload.wikimedia.org/wikipedia/commons/6/69/%C3%81baco_Oriental-Wikilibro.pdf)) a [TiddlyWiki](https://tiddlywiki.com/).
 
 La finalidad es doble:
 
