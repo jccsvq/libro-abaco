@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="robots" content="noindex">
+<title>Ábaco de Lee</title>
+<link rel="shortcut icon" href="../images/abacus.ico" type="image/ico">
+<link rel="stylesheet" href="default.css" type="text/css">
+<script src="./abacus.js?ver<%=DateTime.Now.Ticks.ToString()%>"></script>
+</head>
+<body oncontextmenu="return false;">
+<h1>Ábaco de Lee</h1>
+<table><tr><td>
+&nbsp;A0_Varillas:&nbsp;
+</td><td>
+  <input id="auxiliary0_rails" type="number" min="1" value="7"/>
+  <!--<input id="auxiliary0_rails_number" style="padding-left: 2px;" readonly size=1 value="7"><input id="auxiliary0_rails" type="range" min="1" max="24" value="7" oninput="auxiliary0Change(this.value)"/>-->
+</td><td>
+  <input id="auxiliary0_clear" type="submit" value="Borrar"/>
+  <!--<input id="auxiliary0_complement" type="submit" value="Complement"/>-->
+  <input id="auxiliary0_undo" type="submit" value="Deshacer"/>
+  <input id="auxiliary0_redo" type="submit" value="Rehacer"/>
+</td><td>
+&nbsp;
+</td><td>
+&nbsp;A1_Varillas:&nbsp;
+</td><td>
+  <input id="auxiliary1_rails" type="number" min="1" value="11"/>
+  <!--<input id="auxiliary1_rails_number" style="padding-left: 2px;" readonly size=1 value="13"><input id="auxiliary1_rails" type="range" min="1" max="24" value="13" oninput="auxiliary1Change(this.value)"/>-->
+</td><td>
+  <input id="auxiliary1_clear" type="submit" value="Borrar"/>
+  <!--<input id="auxiliary1_complement" type="submit" value="Complement"/>-->
+  <input id="auxiliary1_undo" type="submit" value="Deshacer"/>
+  <input id="auxiliary1_redo" type="submit" value="Rehacer"/>
+</td></tr></table>
+<table><tr><td>
+  <!--<input id="decrement" type="submit" value="Decrement"/>
+  <input id="increment" type="submit" value="Increment"/>-->
+&nbsp;Varillas:&nbsp;
+</td><td>
+  <input id="primary_rails" type="number" min="1" value="13"/>
+  <!--<input id="abacus_rails_number" style="padding-left: 2px;" readonly size=1 value="13"><input id="primary_rails" type="range" min="1" max="24" value="13" oninput="railsChange(this.value)"/>-->
+</td><td>
+  <input id="teach" type="submit" value="Enseñar"/>
+  <input id="clear" type="submit" value="Borrar"/>
+  <!--<input id="complement" type="submit" value="Complement"/>-->
+  <input id="undo" type="submit" value="Deshacer"/>
+  <input id="redo" type="submit" value="Rehacer"/>
+</td></tr></table>
+<br>
+<article id="auxiliary0_article"
+  data-format="Japanese"
+  data-rails="7"
+  data-decimal-position="2"
+  data-bead-color-primary="#32cd32"
+  data-bead-size=20
+  data-latin="0"
+  data-sound="1"></article>
+<article id="auxiliary1_article"
+  data-format="Japanese"
+  data-rails="13"
+  data-decimal-position="2"
+  data-bead-color-primary="#dcdcdc"
+  data-bead-size=20
+  data-latin="0"
+  data-sound="1"></article>
+<article id="primary_article"
+  data-format="Chinese"
+  data-rails="13"
+  data-decimal-position="2"
+  data-bead-size=32
+  data-latin="0"
+  data-sound="1"></article>
+<!--
+  data-bead-color-primary="#32cd32"
+  data-bead-color-primary="#dcdcdc"
+  data-bead-color-primary="#545454"
+  data-format="Medieval"
+  data-format="Roman"
+  data-top-orient="0"
+  data-bottom-orient="1"
+  data-top-pieces="2"
+  data-bottom-pieces="6"
+  data-sign="1"
+  data-subdecks="3"
+  data-vertical="1"
+  data-subbase="8"
+  data-anomaly="2"
+  data-top-pieces="2"
+  data-bottom-pieces="6"
+  data-bottom-piece-percents="4"
+  data-roman-numerals="modern"
+  data-museum="uk"
+  data-museum="uk"
+  data-museum="it"
+  data-museum="fr"
+-->
+<table><tr><td><table><tr><td>
+<div id="auxiliary0_p">
+<span id="auxiliary0_span" contenteditable="true" style="padding-right: 16px;"></span></div>
+</td><td>
+<div><span id="dummy_span"></span></div>
+</td><td>
+<div id="auxiliary1_p">
+<span id="auxiliary1_span" contenteditable="true" style="padding-right: 16px;"></span></div>
+</td></tr></table></td></tr><tr><td>
+<div id="primary_p">
+<span id="primary_span" contenteditable="true" style="padding-right: 16px;"></span></div>
+</td></tr></table>
+<script>initLeeAbacus(null, null, null,
+  document.getElementById("auxiliary0_span"),
+  document.getElementById("dummy_span"),
+  document.getElementById("auxiliary1_span"),
+  document.getElementById("primary_span"),
+  document.getElementById("auxiliary0_rails"),
+  document.getElementById("auxiliary1_rails"),
+  document.getElementById("primary_rails"), 26);</script>
+<iframe src="./tail-frame-SP.html" title="Page footer" width="100%" height="85" style="border:none"></iframe>
+</body>
+</html>
