@@ -149,7 +149,7 @@ var de = {
   "Final_answer": "Endgültige Antwort",
   "Subtracting": "Subtrahieren",
 };
-var es = {
+var en = {
   "Enter_calc": "Ingrese operación X+Y, X-Y, X*Y, X/Y, Xv o Xu donde X y el resultado son nonegativos.",
   "Press_enter": "Presione Enter para recorrer los pasos de cálculo.",
   "add": "sumar",
@@ -173,8 +173,8 @@ var es = {
   "Current_answer": "Respuesta actual",
   "divide_by": "dividir por",
   "Dividing": "Dividiendo",
-  "Division_overflow": "División excesiva",
-  "Division_underflow": "Division insuficiente",
+  "Division_overflow": "Divisor excesivo",
+  "Division_underflow": "Divisor insuficiente",
   "do_nothing": "nada que hacer",
   "Done": "Hecho",
   "Final_answer": "Resultado final",
@@ -182,7 +182,7 @@ var es = {
   "from_lower_deck": "del marco inferior",
   "from_primary_field": "from primary field, offset digit by corresponding position",
   "from_upper_deck": "del marco superior",
-  "grouping_digits_yields": "agrupando dígotos resulta",
+  "grouping_digits_yields": "agrupando dígitos resulta",
   "in_group": "en el grupo",
   "Left": "Izquierda",
   "left_to_right": "izquierda a derecha",
