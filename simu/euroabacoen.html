@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="robots" content="noindex">
+<title>€-Abacus</title>
+<link rel="shortcut icon" href="../images/abacusro.ico" type="image/ico">
+<link rel="stylesheet" href="default.css" type="text/css">
+<script src="./abacus.js?ver<%=DateTime.Now.Ticks.ToString()%>"></script>
+</head>
+<body oncontextmenu="return false;">
+<h1>€-Abacus</h1>
+<div>
+  <!--<input id="decrement" type="submit" value="Decrement"/>
+  <input id="increment" type="submit" value="Increment"/>-->
+  Rods: <input id="abacus_rails" type="number" min="1" value="7"/>
+  <!--Rails: <input id="abacus_rails_number" style="padding-left: 2px;" readonly size=1 value="7"><input id="abacus_rails" type="range" min="1" max="24" value="7" oninput="railsChange(this.value)"/>-->
+  <input id="clear" type="submit" value="Clear"/>
+  <!--<input id="complement" type="submit" value="Complement"/>-->
+  <input id="undo" type="submit" value="Undo"/>
+  <input id="redo" type="submit" value="Redo"/>
+</div>
+<!--
+  https://en.wikipedia.org/wiki/Euro
+  data-format="Roman"
+-->
+<article id="abacus_article"
+  data-format="Generic"
+  data-rails="5"
+  data-modern-roman="1"
+  data-top-number="1"
+  data-bottom-number="4"
+  data-decimal-position="2"
+  data-bead-size="64"
+  data-currency="eu"
+  data-sound="1"></article>
+<div id="abacus_p">
+<span id="abacus_span" contenteditable="true" style="padding-right: 16px;"></span></div>
+<script>initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));</script>
+
+<iframe src="./tail-frame-EN.html" title="Page footer" width="100%" height="85" style="border:none"></iframe>
+</body>
+</html>

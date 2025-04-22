@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="robots" content="noindex">
+<title>Mesopotamian Abacus</title>
+<link rel="shortcut icon" href="../images/abacusro.ico" type="image/ico">
+<link rel="stylesheet" href="default.css" type="text/css">
+<script src="./abacus.js?ver<%=DateTime.Now.Ticks.ToString()%>"></script>
+</head>
+<body oncontextmenu="return false;">
+<h1>Mesopotamian Abacus</h1>
+<h2>(Hipotetic)</h2>
+<div>
+  <!--<input id="decrement" type="submit" value="Decrement"/>
+  <input id="increment" type="submit" value="Increment"/>-->
+  Rods: <input id="abacus_rails" type="number" min="1" value="9"/>
+  <!--Rails: <input id="abacus_rails_number" style="padding-left: 2px;" readonly size=1 value="10"><input id="abacus_rails" type="range" min="1" max="24" value="10" oninput="railsChange(this.value)"/>-->
+<!--  <input id="teach" type="submit" value="Tutor"/>-->
+  <input id="clear" type="submit" value="Clear"/>
+  <input id="complement" type="submit" value="Complement"/>
+  <input id="undo" type="submit" value="Undo"/>
+  <input id="redo" type="submit" value="Redo"/>
+</div>
+<article id="abacus_article"
+  data-format="Generic"
+  data-bead-size="40"
+  data-top-number="5"
+  data-bottom-number="9"
+  data-top-spaces="2"
+  data-bottom-spaces="2"
+  data-rails="9"
+  data-base="60"
+  data-display-base="10"
+  data-decimal-position="0"
+  data-slot="0"
+  data-roman-markers="none"
+  data-vertical="0"
+  data-color-scheme="6"
+  data-bead-color-secondary="#2f6f2f"
+  data-sound="1"></article>
+<div id="abacus_p">
+<span id="abacus_span" contenteditable="true" style="padding-right: 16px;"></span></div>
+<script>initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));</script>
+<hr>
+<p>You can use <a target="_Blank" href="http://baptiste.meles.free.fr/site/mesocalc.html#conversions">MesoCalc</a> to convert between decimal and sexagesimal integers.</p>
+<iframe src="./tail-frame-EN.html" title="Page footer" width="100%" height="85" style="border:none"></iframe>
+
+</body>
+</html>
