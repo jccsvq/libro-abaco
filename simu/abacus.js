@@ -149,7 +149,7 @@ var de = {
   "Final_answer": "Endgültige Antwort",
   "Subtracting": "Subtrahieren",
 };
-var en = {
+var es = {
   "Enter_calc": "Ingrese operación X+Y, X-Y, X*Y, X/Y, Xv o Xu donde X y el resultado son nonegativos.",
   "Press_enter": "Presione Enter para recorrer los pasos de cálculo.",
   "add": "sumar",

@@ -14,28 +14,28 @@
 # 1 7 8 2 2
 # 
 # etc.
-BEGIN{
-printf "|<p style=\"font-size: 21px;line-height: 1px;\">"
+BEGIN {
+	printf "|<p style=\"font-size: 21px;line-height: 1px;\">"
 }
 
 NF == 0 {
-print "</p>|" ; 
-print "|> |"
-printf "|<p style=\"font-size: 21px;line-height: 1px;\">"
+	print "</p>|"
+	print "|> |"
+	printf "|<p style=\"font-size: 21px;line-height: 1px;\">"
 }
 
 NF > 0 {
-for(i=1;i<=NF;i++){
-    printf "[img[crr%s.png]]", $i;  
-    };
-
-for(i=1;i<=NF;i++){
-    printf " %s", $i;  
-    };
-printf "<br>";
+	for (i = 1; i <= NF; i++) {
+		printf "[img[crr%s.png]]", $i
+	}
+	for (i = 1; i <= NF; i++) {
+		printf " %s", $i
+	}
+	printf "<br>"
 }
 
-END{
-print "</p>|" ; 
-print "|> |"
+END {
+	print "</p>|"
+	print "|> |"
 }
+
