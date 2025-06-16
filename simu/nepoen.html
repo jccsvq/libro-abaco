@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="robots" content="noindex">
+<title>Mesoamerican Abacus</title>
+<link rel="shortcut icon" href="../images/abacus.ico" type="image/ico">
+<link rel="stylesheet" href="default.css" type="text/css">
+<script src="./abacus.js?ver<%=DateTime.Now.Ticks.ToString()%>"></script>
+</head>
+<body oncontextmenu="return false;">
+<h1>Mesoamerican Vigesimal Abacus</h1>
+<h2>(Nepohualtzintzin)</h2>
+<div>
+  <!--<input id="decrement" type="submit" value="Decrement"/>
+  <input id="increment" type="submit" value="Increment"/>-->
+  Rails: <input id="abacus_rails" type="number" min="1" value="13"/>
+  <!--Rails: <input id="abacus_rails_number" style="padding-left: 2px;" readonly size=1 value="13"><input id="abacus_rails" type="range" min="1" max="24" value="13" oninput="railsChange(this.value)"/>-->
+  <input id="teach" type="submit" value="Teach"/>
+  <input id="clear" type="submit" value="Clear"/>
+  <input id="complement" type="submit" value="Complement"/>
+  <input id="undo" type="submit" value="Undo"/>
+  <input id="redo" type="submit" value="Redo"/>
+</div>
+<br>
+<article id="abacus_article"
+  data-format="Generic"
+  data-diamond="0"
+  data-top-number="3"
+  data-bottom-number="4"
+  data-top-spaces="2"
+  data-bottom-spaces="2"
+  data-rails="13"
+  data-base="20"
+  data-display-base="20"
+  data-decimal-position="0"
+  data-vertical="0"
+  data-color-scheme="16"
+  data-bead-color-secondary="#00008b"
+  data-sound="1"></article>
+<div id="abacus_p">
+<span id="abacus_span" contenteditable="false" style="padding-right: 16px;"></span></div>
+<script>initAbacus(null, document.getElementById("abacus_span"), document.getElementById("abacus_rails"));</script>
+
+<iframe src="./tail-frame-EN.html" title="Page footer" width="100%" height="85" style="border:none"></iframe>
+</body>
+</html>
